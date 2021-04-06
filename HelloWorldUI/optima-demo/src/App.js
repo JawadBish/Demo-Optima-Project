@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className="main-optima-page">
+      <div className="optima-section-first">
+      <h1>Optima Demo</h1>
+    <h2> Optima SAAS</h2>
+    <p>Software as a Service has a lot to offer.<br/>
+       If it’s used properly, it can help your business save money, time, and human resources. <br/>
+       By eliminating problems like software maintenance and incompatibility, SaaS can provide streamlined focus and greater productivity</p>
+      </div>
+  </div>
+    
+  )
 }
 
 export default App;
