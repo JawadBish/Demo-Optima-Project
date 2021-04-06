@@ -11,11 +11,11 @@ public interface DesignService {
 
     List<Design> findAllDesigns();
 
-    Optional<Design> findOneDesign();
+    Optional<Design> findOneDesign(String designId);
 
-    Design createDesign();
+    Design createDesign(Design design);
 
-    Design updateDesign();
+    Design updateDesign(Design design,String designId);
 
     void deleteDesign(String designId);
 }
