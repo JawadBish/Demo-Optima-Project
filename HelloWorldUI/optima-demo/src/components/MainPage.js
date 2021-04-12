@@ -6,6 +6,10 @@ const MainPage = () => {
     window.location = '/customer-accounts';
 }
 
+const createAccount = () => {
+  window.location = '/customer-accounts/create';
+}
+
     return (
         <div>
            
@@ -19,6 +23,7 @@ const MainPage = () => {
        By eliminating problems like software maintenance and incompatibility, SaaS can provide streamlined focus and greater productivity</p>
 
        <button className="default-button" onClick={goToAccount}> Register Now!</button>
+       <button className="default-button" onClick={createAccount}> Already Registered!</button>
       </div>
     <div className="boxes">
     <div className="box">
@@ -38,9 +43,11 @@ const MainPage = () => {
     <p>With the conventional software installation method, updates can require enormous amounts of time and money. Even worse, version discrepancies between members of your workforce can lead to compatibility issues and wasted time. With SaaS however, subscribers can simply log-on to already upgraded services.</p>
     </div>
     </div>
+    
 </div>
 
     </div> 
+    
         </div>
     )
 }

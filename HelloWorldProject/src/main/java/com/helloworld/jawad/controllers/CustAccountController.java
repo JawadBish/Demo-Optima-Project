@@ -1,9 +1,7 @@
 package com.helloworld.jawad.controllers;
 
 import com.helloworld.jawad.models.CustomerAccount;
-import com.helloworld.jawad.models.Design;
 import com.helloworld.jawad.services.CustomerAccountService;
-import com.helloworld.jawad.services.DesignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

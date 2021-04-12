@@ -15,14 +15,13 @@ public class CustomerAccount {
     protected String id;
     @Column
     protected String name;
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    protected Design customizedDesign;
+    @Column
+    protected String logo;
 
-
-    public CustomerAccount(String id, String name, Design customizedDesign) {
+    public CustomerAccount(String id, String name, String logo) {
         this.id = id;
         this.name = name;
-        this.customizedDesign = customizedDesign;
+        this.logo = logo;
     }
 
     public String getId() {
@@ -41,11 +40,11 @@ public class CustomerAccount {
         this.name = name;
     }
 
-    public Design getCustomizedDesign() {
-        return customizedDesign;
+    public String getLogo() {
+        return logo;
     }
 
-    public void setCustomizedDesign(Design customizedDesign) {
-        this.customizedDesign = customizedDesign;
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 }

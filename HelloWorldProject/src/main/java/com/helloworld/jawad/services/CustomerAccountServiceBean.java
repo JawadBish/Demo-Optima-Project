@@ -33,6 +33,7 @@ public class CustomerAccountServiceBean implements CustomerAccountService {
 
     @Override
     public CustomerAccount createCustAccount(CustomerAccount customerAccount) {
+
         return customerAccountRepository.save(customerAccount);
     }
 
