@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import '../../App.css';
 import CustAccountService from '../../services/CustAccountService';
-
-
+import {MdDelete} from "react-icons/md";
+import {BiShow} from "react-icons/bi"
 export default class CustAccounts extends Component {
     state = {
         accounts: []
@@ -21,7 +21,20 @@ export default class CustAccounts extends Component {
             })
     }
 
+    deleteAccount(id) {
+        CustAccountService.deleteAccount(id)
+            .then((response) => {
+                window.location.reload();
+            })
+            .catch((err) => {
+            });
+    }
 
+    goToAccount(id) {
+        window.location = `/customer-accounts/${id}`; 
+    }
+    
+    
       
  
 
@@ -34,6 +47,7 @@ export default class CustAccounts extends Component {
             window.location = '/customer-accounts/create';
           }
 
+     
 
         return (
         
@@ -43,6 +57,12 @@ export default class CustAccounts extends Component {
                  <div className="box-of-content" key={account.id}>
                      <h1>{account.name}</h1>
                      <p>{account.logo}</p>
+
+                     <MdDelete
+              onClick={() => { if (window.confirm('Are you sure you want to delete this account?')) this.deleteAccount(account.id) }} size={30} color="black"/>
+                    <BiShow 
+                    onClick={() => {this.goToAccount(account.id)}} size={30} color="black"/> 
+                   
                    </div>   
             ))}
                   </div>

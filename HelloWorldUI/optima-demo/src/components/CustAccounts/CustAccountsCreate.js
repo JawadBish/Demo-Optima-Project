@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 
 import CustAccountService from '../../services/CustAccountService';
 
-
 export default class CustAccountsCreate extends Component {
     constructor() {
         super()
@@ -59,6 +58,7 @@ export default class CustAccountsCreate extends Component {
             name: this.state.name,
             logo: this.state.logo
         };
+        
         this.createAccount(newCust);
     }
 
@@ -70,6 +70,18 @@ export default class CustAccountsCreate extends Component {
             window.location = '/';
         }
 
+        const required = value => {
+            if (!value) {
+              return (
+                <div className="alertDanger" >
+                     <p className="alertDanger">  
+               Required Field         
+                </p> 
+                </div>
+              );
+            }
+          };
+
         return (
             <div className="mainCreate">
                 <div className="top-container-forms">
@@ -77,7 +89,11 @@ export default class CustAccountsCreate extends Component {
 
                         <h1>Create New Account</h1>
 
-                        <form onSubmit={this.onSubmit}>
+                        <form onSubmit={this.onSubmit}
+                         ref={c => {
+                            this.form = c;
+                          }}
+                        >
                             <div className="form-group-create">
                                 <h5> Account Name </h5>
                                 <input
@@ -85,6 +101,7 @@ export default class CustAccountsCreate extends Component {
                                     name="name" placeholder="Name"
                                     value={this.state.name}
                                     onChange={this.onChange}
+                                    validations={[required]}
                                 />
 
                             
@@ -94,6 +111,7 @@ export default class CustAccountsCreate extends Component {
                                         name="logo" placeholder="Logo"
                                         value={this.state.logo}
                                         onChange={this.onChange}
+                                        validations={[required]}
                                     />
                
                                 </div>
@@ -116,7 +134,6 @@ export default class CustAccountsCreate extends Component {
                                         </div>
                                     </div>
                                 )}
-
                         </form>
 
                     </div>

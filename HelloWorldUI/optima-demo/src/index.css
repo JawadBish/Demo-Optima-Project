@@ -172,3 +172,48 @@ text-decoration: none;
 
 }
 
+.view-details
+{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    '. account-details .'
+}
+
+
+
+
+.top-level-page-main {
+  align-items: center;
+  justify-content: center;
+}
+.account-details{
+  grid-area : account-details;
+  margin-bottom: 15px;
+  border: 0.5px solid pink;
+  opacity: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+}
+
+.card-group-field {
+  width: 370px;
+  /* height: 45px; */
+  margin: 10px;
+  color: purple;
+  border: 0.5px solid pink;
+  padding: 5px;
+  text-align: center;
+}
+
+
+.card-group-field h3 {
+  color: blue;
+  font-size: medium;
+}
+
