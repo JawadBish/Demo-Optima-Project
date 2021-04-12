@@ -56,7 +56,8 @@ export default class CustAccountsCreate extends Component {
     onSubmit(event) {
         event.preventDefault()
         const newCust = {
-            name: this.state.name
+            name: this.state.name,
+            logo: this.state.logo
         };
         this.createAccount(newCust);
     }
@@ -64,6 +65,10 @@ export default class CustAccountsCreate extends Component {
 
 
     render() {
+
+        const goToBack = () => {
+            window.location = '/';
+        }
 
         return (
             <div className="mainCreate">
@@ -83,10 +88,10 @@ export default class CustAccountsCreate extends Component {
                                 />
 
                             
-                                    <h5> Background Color </h5>
+                                    <h5> Company Logo </h5>
                                     <input
                                         type="text"
-                                        name="name" placeholder="Logo "
+                                        name="logo" placeholder="Logo"
                                         value={this.state.logo}
                                         onChange={this.onChange}
                                     />
@@ -95,8 +100,8 @@ export default class CustAccountsCreate extends Component {
 
                                 {/* <button className="btn" onClick={this.props.history.goBack}> للعودة  </button> <br></br> */}
                                 <br></br>
-                                <input type="submit" value="Submit" className="btn btn-primary btn-block mt-4" />
-
+                                <input type="submit" value="Submit" className="default-button" />
+                                <button className="default-button" onClick={goToBack}> Home Page!</button>        
                                 {this.state.message && (
                                     <div className="form-group">
                                         <div

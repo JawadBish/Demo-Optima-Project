@@ -1,6 +1,7 @@
 :root {
   --backgroundbox: purple;
   --background: pink;
+
   --basic-shadow: 0px 3px 5px rgba(15, 14, 14, 0.733);
 }
 
@@ -55,6 +56,7 @@
 
 button {
   text-align: center;	
+
   background-color: pink;
   color:purple;
   text-decoration: none;
@@ -97,5 +99,76 @@ font-family: var(--main-font-fmaily);
   background-color:pink;
 color:purple;
 text-decoration: none;
+}
+
+
+
+
+.button-wrapper {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
+.mainCreate {
+  margin-top: 30px; 
+  display: grid;
+  align-items:center;
+  justify-content:center; 
+}
+
+.top-container-forms
+{
+    grid-template-areas: 
+    '. create-form .'
+}
+
+.create-form {
+  grid-area : create-form;
+  margin-bottom: 15px;
+  box-shadow: var(--basic-shadow);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: solid 1px purple ;
+}
+
+.create-form h1 {
+  color: purple;
+  text-shadow: 1px 2px pink;
+}
+
+
+.container-page-full {
+  display:grid;
+  grid-gap: 20px;
+}
+
+.container-view-contents-boxes {
+  display:grid;   
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.box-of-content {
+  box-shadow: var(--basic-shadow);
+  background: var(--background);
+  text-align: center;
+  padding: 1.5rem 2rem;
+ border: 1px solid purple;
+  margin : 20px;
+  color: purple;
+  max-width: 800px;
+}
+
+.form-group-create h5 {
+  color : purple;
+
 }
 

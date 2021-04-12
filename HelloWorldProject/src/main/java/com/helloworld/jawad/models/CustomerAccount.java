@@ -24,6 +24,8 @@ public class CustomerAccount {
         this.logo = logo;
     }
 
+    public CustomerAccount() {}
+
     public String getId() {
         return id;
     }

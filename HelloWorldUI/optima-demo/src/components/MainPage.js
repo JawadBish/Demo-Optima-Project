@@ -22,8 +22,8 @@ const createAccount = () => {
        If it’s used properly, it can help your business save money, time, and human resources. <br/>
        By eliminating problems like software maintenance and incompatibility, SaaS can provide streamlined focus and greater productivity</p>
 
-       <button className="default-button" onClick={goToAccount}> Register Now!</button>
-       <button className="default-button" onClick={createAccount}> Already Registered!</button>
+       <button className="default-button" onClick={createAccount}> Register Now!</button>
+       <button className="default-button" onClick={goToAccount}> Already Registered!</button>
       </div>
     <div className="boxes">
     <div className="box">

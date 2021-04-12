@@ -16,29 +16,41 @@ export default class CustAccounts extends Component {
         CustAccountService.getAllAccounts()
             .then(res => {
                 const accounts = res.data;
+                console.log("ACC",accounts)
                 this.setState({ accounts });
             })
     }
 
- 
+
       
  
 
     render() {
+        const goToBack = () => {
+            window.location = '/';
+        }
+
+        const createAccount = () => {
+            window.location = '/customer-accounts/create';
+          }
+
+
         return (
         
             <div className="container-page-full">
-                <div className="container-view-contents">
+                <div className="container-view-contents-boxes">
             {this.state.accounts.map(account => (
-                 <div className="list-wrap-contents">
+                 <div className="box-of-content" key={account.id}>
                      <h1>{account.name}</h1>
+                     <p>{account.logo}</p>
                    </div>   
             ))}
-                   
-                     
-                 
                   </div>
+                  <div className="button-wrapper">
+                  <button className="default-button" onClick={createAccount}> Register Now!</button>        
+                  <button className="default-button" onClick={goToBack}> Home Page!</button>        
                   </div>
+                                    </div>
         )
         
     }
