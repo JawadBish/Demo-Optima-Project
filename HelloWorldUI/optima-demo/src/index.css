@@ -78,6 +78,9 @@ button:hover {
   text-decoration: none;
   }
 
+  
+
+
 
 .default-button {
   text-align: center;	
@@ -94,6 +97,8 @@ font-family: var(--main-font-fmaily);
   display: inline-block;
   transition-duration: 0.4s;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 .default-button:hover {
   background-color:pink;
@@ -138,6 +143,8 @@ text-decoration: none;
   padding: 2rem;
   border: solid 1px purple ;
 }
+
+
 
 .create-form h1 {
   color: purple;

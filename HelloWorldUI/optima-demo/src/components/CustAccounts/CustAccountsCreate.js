@@ -58,9 +58,10 @@ export default class CustAccountsCreate extends Component {
             name: this.state.name,
             logo: this.state.logo
         };
-        
+
         this.createAccount(newCust);
     }
+
 
 
 
@@ -72,15 +73,15 @@ export default class CustAccountsCreate extends Component {
 
         const required = value => {
             if (!value) {
-              return (
-                <div className="alertDanger" >
-                     <p className="alertDanger">  
-               Required Field         
-                </p> 
-                </div>
-              );
+                return (
+                    <div className="alertDanger" >
+                        <p className="alertDanger">
+                            Required Field
+                </p>
+                    </div>
+                );
             }
-          };
+        };
 
         return (
             <div className="mainCreate">
@@ -90,9 +91,9 @@ export default class CustAccountsCreate extends Component {
                         <h1>Create New Account</h1>
 
                         <form onSubmit={this.onSubmit}
-                         ref={c => {
-                            this.form = c;
-                          }}
+                            ref={c => {
+                                this.form = c;
+                            }}
                         >
                             <div className="form-group-create">
                                 <h5> Account Name </h5>
@@ -104,41 +105,44 @@ export default class CustAccountsCreate extends Component {
                                     validations={[required]}
                                 />
 
-                            
-                                    <h5> Company Logo </h5>
-                                    <input
-                                        type="text"
-                                        name="logo" placeholder="Logo"
-                                        value={this.state.logo}
-                                        onChange={this.onChange}
-                                        validations={[required]}
-                                    />
-               
-                                </div>
 
-                                {/* <button className="btn" onClick={this.props.history.goBack}> للعودة  </button> <br></br> */}
-                                <br></br>
-                                <input type="submit" value="Submit" className="default-button" />
-                                <button className="default-button" onClick={goToBack}> Home Page!</button>        
-                                {this.state.message && (
-                                    <div className="form-group">
-                                        <div
-                                            className={
-                                                this.state.successful
-                                                    ? "alertSuccess"
-                                                    : "alertDanger"
-                                            }
-                                            role="alert"
-                                        >
-                                            {this.state.message}
-                                        </div>
+                                <h5> Company Logo </h5>
+                                <input
+                                    type="text"
+                                    name="logo" placeholder="Logo"
+                                    value={this.state.logo}
+                                    onChange={this.onChange}
+                                    validations={[required]}
+                                />
+
+                            </div>
+
+                            {/* <button className="btn" onClick={this.props.history.goBack}> للعودة  </button> <br></br> */}
+                            <br></br>
+
+
+                            {this.state.message && (
+                                <div className="form-group">
+                                    <div
+                                        className={
+                                            this.state.successful
+                                                ? "alertSuccess"
+                                                : "alertDanger"
+                                        }
+                                        role="alert"
+                                    >
+                                        {this.state.message}
                                     </div>
-                                )}
+                                </div>
+                            )}
+                       
+                            <input type="submit" value="Submit" className="default-button" />
+                        
                         </form>
-
+                        <button className="default-button" onClick={goToBack}> Home Page!</button>
                     </div>
 
-                    </div></div>
+                </div></div>
 
 
         )
