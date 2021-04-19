@@ -19,6 +19,7 @@ public class CustAccountController {
     private CustomerAccountService customerAccountService;
 
 
+
     @GetMapping
     public List<CustomerAccount> getAllCustAccounts() {
         return customerAccountService.findAllCustAccounts();
