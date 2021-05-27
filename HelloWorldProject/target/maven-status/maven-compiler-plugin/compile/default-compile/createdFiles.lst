@@ -1,0 +1,7 @@
+com\helloworld\jawad\services\CustomerAccountServiceBean.class
+com\helloworld\jawad\repository\CustomerAccountRepository.class
+com\helloworld\jawad\controllers\HelloController.class
+com\helloworld\jawad\controllers\CustAccountController.class
+com\helloworld\jawad\models\CustomerAccount.class
+com\helloworld\jawad\services\CustomerAccountService.class
+com\helloworld\jawad\JawadApplication.class

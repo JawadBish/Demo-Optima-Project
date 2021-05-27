@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.helloworld.jawad.JawadApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.632 s - in com.helloworld.jawad.JawadApplicationTests
